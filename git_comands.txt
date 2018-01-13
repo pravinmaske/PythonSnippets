@@ -1,3 +1,6 @@
 git add git_commands.txt
 git commit -m "Git basic commands"
 git push -u origin master
+
+
+git config --global user.name "pravinmaske963@gmail.com"
