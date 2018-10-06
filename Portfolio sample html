@@ -1,0 +1,133 @@
+<!--advent pro font-->
+  <link href="https://fonts.googleapis.com/css?family=Advent+Pro" rel="stylesheet">
+
+<!--fontawesome icon cdn-->
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css%22%20rel=%22stylesheet%22%20integrity=%22sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN%22%20crossorigin=%22anonymous%22%3E'>
+
+<!--Lato font-->
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+
+<body>
+
+<!--script for icons-->
+<script src="https://use.fontawesome.com/55c68c9da2.js"></script>
+
+
+<nav>
+	<ul class="animatedunderlinemenu">
+  		<li><a href="#">Home</a></li>
+  		<li><a href="#">Videos</a></li>
+  		<li><img src="https://i.imgur.com/ithqDPZ.jpg"></li>
+  		<li><a href="#">About</a></li>
+  		<li><a href="#">Contact</a></li>
+  	</ul>
+  
+  <select>
+    <option value="" selected="selected">Select</option> 
+    
+    <option value="#">Home</option> 
+    <option value="#">Videos</option> 
+    <option value="#">About</option> 
+    <option value="#">Contact</option> 
+   </select>
+</nav>
+
+
+<script>
+//script for dropdown menu - using jquery
+  $("<select />").appendTo("nav");
+
+$("<option />", {
+   "selected": "selected",
+   "value"   : "",
+   "text"    : "Go to..."
+}).appendTo("nav select");
+
+//puts menu items in select
+$("nav a").each(function() {
+ var el = $(this);
+ $("<option />", {
+     "value"   : el.attr("href"),
+     "text"    : el.text()
+ }).appendTo("nav select");
+});
+</script>
+
+<script>
+//script for going to page
+  $("nav select").change(function() {
+  window.location = $(this).find("option:selected").val();
+  });
+ </script>
+ 
+<!--large logo-->
+<div id="content">
+  <center><img src="https://i.gyazo.com/51ae8745dbb957162aaaa1aee244be8b.png" alt="logo" width="100%" height="auto"></center>
+
+  <h1>
+Media and Production Company
+</h1>
+
+<!--centered intro video-->
+  <center><div id="constrain">
+    <div class="video-container"><iframe src="https://player.vimeo.com/video/186080664" allowfullscreen></iframe></div>
+  </center>
+</div>
+  <h2>
+    Award Winning Films
+  </h2>
+  <p>Winner of 2015 CampusFest Film Festival. Short Film "Of Princes" selected for showing at Cannes International Film Festival.</p>
+  <h2>
+    Check out our past <a href='#'>videos</a> or <a href='#'>contact</a> us for information about bringing your dream to the big screen.
+  </h2>
+  </div>
+
+
+
+<!--footer-->
+<!--<footer>
+  footer
+  <a href="https://www.youtube.com/stuartschrader" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i>
+</footer>-->
+  <footer>
+  <div class="footer">
+      <div class="container">
+        <h1>Follow us on:</h1>
+              
+              <a href='#'><i class="fa fa-facebook fa-3x fa-fw"></i></a>
+              <a href='#'><i class="fa fa-twitter fa-3x fa-fw"></i></a>
+              <a href='#'><i class="fa fa-youtube-play fa-3x fa-fw"></i></a>
+              <a href='#'><i class="fa fa-rss fa-3x fa-fw"></i></a>
+              
+              <a href='#'><i class="fa fa-flickr fa-3x fa-fw"></i></a>
+              <a href='#'><i class="fa fa-linkedin fa-3x fa-fw"></i></a>
+            </span>
+      </div>
+    </div>
+</footer>
+
+
+
+
+
+<!--
+-----------SOURCES---------------
+http://www.dynamicdrive.com/style/csslibrary/item/css_animated_underline_menu/   -> MENU
+
+https://jsfiddle.net/jalbertbowdenii/rLzd7xdx/  -> STYLE FOR SELECT ELEMENT
+
+https://bootsnipp.com/snippets/k2nNB -> FOOTER
+
+https://css-tricks.com/convert-menu-to-dropdown/ -> MENU CHANGING TO DROPDOWN
+
+https://www.ostraining.com/blog/coding/responsive-videos/   -> MAKING VIDEOS RESPONSIVE
+
+fontawesome.com for social media icons
+
+wwww.builtbybuffalo.com for menu idea
+
+
+-->
+
+
+</body>
